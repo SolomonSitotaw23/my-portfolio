@@ -20,6 +20,7 @@ const ProjectsSec = styled.section`
   text-align: center;
   flex-direction: column;
   margin: 20px 0px;
+  padding-top: 15vh;
 `;
 const ProjectHeading = styled.div`
   margin-top: 20px;

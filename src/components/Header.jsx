@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import homeLogo from "../assets/mylogo.png";
 
-function Header() {
+function Header({ secNum }) {
+  const bg = useRef(false);
+  if (secNum % 2 === 0 || secNum === 1) {
+    bg.current = true;
+  } else {
+    bg.current = false;
+  }
+  console.log("bg = ", bg);
   return (
     <Navigation>
       <HomeIcon>
         <img src={homeLogo} alt="" />
       </HomeIcon>
-      <LinksWrapper>
+      <LinksWrapper bg={bg.current}>
         <Links className="links">
           <Link>
             <LinkItem href="#hero" className="blue-color link-item">
@@ -59,6 +66,14 @@ const HomeIcon = styled.div`
 
 const LinksWrapper = styled.div`
   width: 40%;
+  li {
+    a {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: ${(props) =>
+        props.bg ? "var(--main-color)" : "var(--Secondary-color)"};
+    }
+  }
   @media (max-width: 1000px) {
     width: 60%;
   }

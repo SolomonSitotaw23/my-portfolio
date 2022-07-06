@@ -8,10 +8,7 @@ const Footer = () => {
     <FooterSec class="footer ">
       <h1>Say Hello</h1>
       <Social>
-        <a
-          href="mailto: solomonsitotaw9@gmail.com?subject=contact"
-          target="_blank"
-        >
+        <a href="mailto: solomonsitotaw9@gmail.com?subject=contact">
           <ion-icon name="mail"></ion-icon>
         </a>
         <a href="https://codepen.io/s-l-d">
