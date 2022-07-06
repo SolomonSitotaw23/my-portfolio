@@ -4,6 +4,7 @@ import AboutMe from "./components/AboutMe.jsx";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Education />
       <Projects />
       <ContactMe />
+      <Footer />
     </>
   );
 }

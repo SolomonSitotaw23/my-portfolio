@@ -5,7 +5,6 @@ const Button = (props) => {
   return (
     <ContactMeCTA className=" scroll-to-contact-me fill-left">
       {props.children}
-      <ion-icon name="arrow-forward-outline"></ion-icon>
     </ContactMeCTA>
   );
 };
