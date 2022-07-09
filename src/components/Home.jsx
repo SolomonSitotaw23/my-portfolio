@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import myPhoto from "../assets/myphoto1.jpg";
-import Button from "./button/Button";
+import myPhoto from "../assets/my_photo1.png";
 
 const Home = () => {
   return (
@@ -14,7 +13,9 @@ const Home = () => {
           A Student at Bahirdar university ,I was born in gondar on the 19th of
           July 1999 G.C. .I am interested in front-end web development.
         </p>
-        <Button>Contact Me</Button>
+        <a href="../assets/my_resume/mycv.pdf" download>
+          Download Resume
+        </a>
       </HeroTxt>
       <PhotoContainer>
         <MyPhoto className="my-photo">
@@ -38,6 +39,7 @@ const HomeSec = styled.section`
     var(--main-color) 60%,
     var(--Secondary-color) 40%
   );
+
   @media (max-width: 1200px) {
     padding: 0 5rem;
   }
@@ -75,6 +77,25 @@ const HeroTxt = styled.div`
   @media (max-width: 1440px) {
     h1 {
       font-size: 56px;
+    }
+    a {
+      border: 1px solid var(--body-bg);
+      text-decoration: none;
+      padding: 1.5rem 6rem;
+      margin-top: 5vh;
+      align-items: center;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: var(--main-color);
+      color: var(--body-bg);
+      cursor: pointer;
+
+      box-shadow: inset 0px 0px 0px var(--Secondary-color);
+      transition: all 0.5s !important;
+      :hover {
+        box-shadow: inset 350px 0px 0px var(--Secondary-color);
+        color: var(--main-color);
+      }
     }
   }
 
@@ -117,9 +138,9 @@ const PhotoContainer = styled.div`
 `;
 
 const MyPhoto = styled.div`
-  width: 330px;
-  height: 438px;
-  border: 3px solid black;
+  width: 250px;
+  height: 338px;
+  border: 3px solid var(--Secondary-color);
   box-shadow: 15px 18px 0px 2px rgb(255, 255, 255);
   -webkit-box-shadow: 15px 18px 0px 2px rgb(255, 255, 255);
   -moz-box-shadow: 15px 18px 0px 2px rgb(255, 255, 255);
@@ -128,5 +149,7 @@ const MyPhoto = styled.div`
     background-size: cover;
     transition: all 0.7s ease-in-out;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;

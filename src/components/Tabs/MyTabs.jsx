@@ -1,7 +1,11 @@
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import styled from "styled-components";
 import sunnySide from "../../assets/sunny-side.jpg";
-import fylo from "../../assets/fylo.jpg";
+import Tesla from "../../assets/TeslaClone.jpg";
+import Fylo from "../../assets/Fylo.jpg";
+
+import beatsLanding from "../../assets/beats landing.jpg";
+import Discord from "../../assets/DiscordLandingPage.jpg";
 
 const MyTabs = () => (
   <STabs
@@ -15,19 +19,19 @@ const MyTabs = () => (
     </STabList>
     <STabPanel>
       <ProjectContainer>
-        <img src={sunnySide} alt="" />
+        <img src={Discord} alt="" />
       </ProjectContainer>
 
       <ProjectContainer>
-        <img src={fylo} alt="" />
+        <img src={beatsLanding} alt="" />
       </ProjectContainer>
 
       <ProjectContainer>
-        <img src={sunnySide} alt="" />
+        <img src={Tesla} alt="" />
       </ProjectContainer>
 
       <ProjectContainer>
-        <img src={sunnySide} alt="" />
+        <img src={Fylo} alt="" />
       </ProjectContainer>
     </STabPanel>
 

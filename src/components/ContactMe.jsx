@@ -4,9 +4,9 @@ import Button from "./button/Button";
 
 const ContactMe = () => {
   return (
-    <ContactMeSec class="contact-me sec" id="contact-me">
+    <ContactMeSec className="contact-me sec" id="contact-me">
       <ContactWrapper>
-        <div class="title">
+        <div className="title">
           <h1>Send me a message!</h1>
           <h2>
             Got a question or proposal, or just want to say hello? Go ahead.
@@ -15,20 +15,20 @@ const ContactMe = () => {
         <form
           action="https://formsubmit.co/solomonsitotaw9@gmail.com"
           method="POST"
-          class="input-wrapper"
+          className="input-wrapper"
         >
           <InputInfo>
-            <label for="name">
+            <label htmlFor="name">
               Your Name
-              <input type="text" class="name" name="name" required />
+              <input type="text" className="name" name="name" required />
             </label>
-            <label for="email">
+            <label htmlFor="email">
               Your Email
-              <input type="email" class="email" required />
+              <input type="email" className="email" required />
             </label>
           </InputInfo>
           <MessageTxt>
-            <label for="message">
+            <label htmlFor="message">
               Your Message
               <textarea
                 name="message"
@@ -64,9 +64,10 @@ const ContactMeSec = styled.section`
   }
   h2 {
     color: #fff;
-    padding: 1rem 10rem 0 10rem;
+    padding: 1rem;
     font-weight: 300;
     font-size: 16px;
+    width: 100%;
   }
   input {
     padding: 1rem 0;

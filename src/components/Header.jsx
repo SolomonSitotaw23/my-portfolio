@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import homeLogo from "../assets/mylogo.png";
 
+import { Link } from "react-scroll";
+
 function Header({ secNum }) {
   const bg = useRef(false);
   if (secNum % 2 === 0 || secNum === 1) {
@@ -9,7 +11,9 @@ function Header({ secNum }) {
   } else {
     bg.current = false;
   }
-  console.log("bg = ", bg);
+  const handleSetActive = (to) => {
+    console.log(to);
+  };
   return (
     <Navigation>
       <HomeIcon>
@@ -17,26 +21,58 @@ function Header({ secNum }) {
       </HomeIcon>
       <LinksWrapper bg={bg.current}>
         <Links className="links">
-          <Link>
-            <LinkItem href="#hero" className="blue-color link-item">
+          <Linkli>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={handleSetActive}
+            >
               Home
-            </LinkItem>
-          </Link>
-          <Link>
-            <LinkItem href="#about" className="blue-color link-item">
-              About Me
-            </LinkItem>
-          </Link>
-          <Link>
-            <LinkItem href="#education" className="blue-color link-item">
+            </Link>
+          </Linkli>
+          <Linkli>
+            <Link
+              activeClass="active"
+              to="aboutMe"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={handleSetActive}
+            >
+              Skills
+            </Link>
+          </Linkli>
+          <Linkli>
+            <Link
+              activeClass="active"
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={handleSetActive}
+            >
               Education
-            </LinkItem>
-          </Link>
-          <Link>
-            <LinkItem href="#projects" className="blue-color link-item">
+            </Link>
+          </Linkli>
+          <Linkli>
+            <Link
+              activeClass="active"
+              to="project"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={handleSetActive}
+            >
               Projects
-            </LinkItem>
-          </Link>
+            </Link>
+          </Linkli>
         </Links>
       </LinksWrapper>
     </Navigation>
@@ -68,10 +104,32 @@ const LinksWrapper = styled.div`
   width: 40%;
   li {
     a {
+      letter-spacing: 0.15em;
+      display: inline-block;
+      padding: 15px 20px;
+      position: relative;
       font-size: 1.2rem;
-      font-weight: 700;
+      font: bold 14px/1.4 "Open Sans", arial, sans-serif;
+      text-transform: uppercase;
       color: ${(props) =>
         props.bg ? "var(--main-color)" : "var(--Secondary-color)"};
+    }
+    a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: ${(props) =>
+        props.bg ? "var(--main-color)" : "var(--Secondary-color)"};
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    a:hover:after {
+      width: 100%;
+      left: 0;
     }
   }
   @media (max-width: 1000px) {
@@ -79,7 +137,7 @@ const LinksWrapper = styled.div`
   }
 `;
 const Links = styled.ul`
-  width: 70%;
+  width: 85%;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -90,7 +148,8 @@ const Links = styled.ul`
     }
   }
 `;
-const Link = styled.li``;
-const LinkItem = styled.a`
-  text-decoration: none;
+const Linkli = styled.li`
+  Link {
+    cursor: pointer;
+  }
 `;

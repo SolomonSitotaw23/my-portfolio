@@ -5,7 +5,7 @@ const Footer = () => {
   var date = new Date();
   var year = date.getUTCFullYear();
   return (
-    <FooterSec class="footer ">
+    <FooterSec className="footer ">
       <h1>Say Hello</h1>
       <Social>
         <a href="mailto: solomonsitotaw9@gmail.com?subject=contact">
@@ -21,9 +21,8 @@ const Footer = () => {
         <a href="https://www.linkedin.com/solomonsitotaw23">
           <ion-icon name="logo-linkedin"></ion-icon>
         </a>
-        <a href="">
-          {" "}
-          <ion-icon name="Call"></ion-icon>
+        <a href="tel : 0975623076" alt="0975623076 | 0940361102">
+          <ion-icon name="Call" alt="0975623076 | 0940361102"></ion-icon>
         </a>
       </Social>
       <CopyRight>
@@ -56,7 +55,6 @@ const FooterSec = styled.section`
   }
   p {
     color: var(--main-color);
-    font-weight: 300;
     text-align: center;
     margin: 2rem;
     font-size: 0.8rem;

@@ -1,24 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import whiteDots from "../assets/white-dots.svg";
-import skills from "../assets/skill.svg";
+import skill from "../assets/skill.svg";
+import Skills from "./Skills";
 const AboutMe = () => {
   return (
     <AboutMeSec>
       <Interest>
-        <img src={skills} alt="" />
+        <img src={skill} alt="" />
       </Interest>
       <Plans>
-        <img src={whiteDots} alt="" />
         <h1>Skills</h1>
-        <p>
-          Being a Software Engineer is more than just programming. It’s a chance
-          to help other people through the power of technology. Having this as a
-          job gives me the power to influence other peoples life through
-          programs that could help them with day to day tasks. so as a software
-          engineer my plan is to build beautiful and problem solving
-          applications for my society.
-        </p>
+        <Skills />
       </Plans>
     </AboutMeSec>
   );
@@ -53,10 +45,13 @@ const Interest = styled.div`
   width: 40%;
   @media (max-width: 900px) {
     width: 80%;
+    img {
+      display: none;
+    }
   }
 `;
 const Plans = styled.div`
-  width: 40%;
+  width: 50%;
 
   @media (max-width: 900px) {
     flex-direction: column;
