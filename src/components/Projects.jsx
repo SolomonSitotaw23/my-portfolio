@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import MyTabs from "./Tabs/MyTabs";
+
 const Projects = () => {
   return (
     <ProjectsSec>
       <ProjectHeading>
         <h3>My Projects</h3>
       </ProjectHeading>
+
       <MyTabs />
     </ProjectsSec>
   );
@@ -21,6 +23,7 @@ const ProjectsSec = styled.section`
   flex-direction: column;
   margin: 20px 0px;
   padding-top: 15vh;
+  margin-bottom: 5rem;
 `;
 const ProjectHeading = styled.div`
   margin-top: 20px;

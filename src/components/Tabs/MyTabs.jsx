@@ -3,6 +3,9 @@ import styled from "styled-components";
 import sunnySide from "../../assets/sunny-side.jpg";
 import Tesla from "../../assets/TeslaClone.jpg";
 import Fylo from "../../assets/Fylo.jpg";
+import Crwn from "../../assets/crwnClothing.jpg";
+import Todo from "../../assets/TodoList.jpg";
+import ControlledPopup from "../PopUp/PopUp";
 
 import beatsLanding from "../../assets/beats landing.jpg";
 import Discord from "../../assets/DiscordLandingPage.jpg";
@@ -20,6 +23,58 @@ const MyTabs = () => (
     <STabPanel>
       <ProjectContainer>
         <img src={Discord} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord  "
+          img={Discord}
+        />
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <img src={beatsLanding} alt="" />
+        <ControlledPopup
+          about=" Fully responsive Beats Production Page"
+          img={beatsLanding}
+        />
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <img src={Tesla} alt="" />
+        <ControlledPopup about="Clone of Landing Page of Tesla  " img={Tesla} />
+      </ProjectContainer>
+
+      <ProjectContainer>
+        <img src={Fylo} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord  "
+          img={Discord}
+        />
+      </ProjectContainer>
+      <ProjectContainer>
+        <img src={Crwn} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord  "
+          img={Discord}
+        />
+      </ProjectContainer>
+      <ProjectContainer>
+        <img src={Todo} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord  "
+          img={Discord}
+        />
+      </ProjectContainer>
+      <ProjectContainer>
+        <img src={sunnySide} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord  "
+          img={Discord}
+        />
+      </ProjectContainer>
+    </STabPanel>
+
+    <STabPanel>
+      <ProjectContainer>
+        <img src={Discord} alt="" />
       </ProjectContainer>
 
       <ProjectContainer>
@@ -33,9 +88,6 @@ const MyTabs = () => (
       <ProjectContainer>
         <img src={Fylo} alt="" />
       </ProjectContainer>
-    </STabPanel>
-
-    <STabPanel>
       <ProjectContainer>
         <img src={sunnySide} alt="" />
       </ProjectContainer>
@@ -43,7 +95,10 @@ const MyTabs = () => (
 
     <STabPanel>
       <ProjectContainer>
-        <img src={sunnySide} alt="" />
+        <img src={Crwn} alt="" />
+      </ProjectContainer>
+      <ProjectContainer>
+        <img src={Todo} alt="" />
       </ProjectContainer>
     </STabPanel>
   </STabs>
