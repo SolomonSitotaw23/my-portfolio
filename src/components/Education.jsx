@@ -10,10 +10,9 @@ const Education = () => {
           Education <hr />
         </h1>
         <p>
+          <br />
           Collecting inspirations, learning new things and building projects are
-          what filling my daily life. I tried to understand my learning process
-          and want that there is something to learn from the start to the
-          beginning. I’ve shared it further to my friends.
+          what filling my daily life.
         </p>
       </EduText>
       <TimeLine>

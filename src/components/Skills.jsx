@@ -11,8 +11,8 @@ const Skills = () => {
           <SkillLevel width="81%"></SkillLevel>
         </Skill>
         <Detail>
-          React js, Redux , Vue, pinia,Tailwind css, styled components, scss,
-          Material ui
+          React js, Redux , Vue, pinia, Apollo Graphql ,Tailwind css, styled
+          components, scss, Material ui
         </Detail>
       </SkillBox>
 
@@ -22,7 +22,7 @@ const Skills = () => {
         <Skill>
           <SkillLevel></SkillLevel>
         </Skill>
-        <Detail>Hasura, Postgressql , Nodejs , Express , php</Detail>
+        <Detail>Hasura, Postgressql , MsSql, Nodejs , Express , php</Detail>
       </SkillBox>
 
       <SkillBox>
@@ -31,7 +31,12 @@ const Skills = () => {
         <Skill>
           <SkillLevel></SkillLevel>
         </Skill>
-        <Detail>Hasura, Postgressql , Nodejs , Express , php</Detail>
+        <Detail>Docker , git </Detail>
+      </SkillBox>
+      <SkillBox>
+        <p>API</p>
+        <p></p>
+        <Detail>Graphql ,Rest </Detail>
       </SkillBox>
     </CenterDiv>
   );

@@ -101,12 +101,18 @@ const Navigation = styled.nav`
   height: ${(props) => (props.changeHeader ? "10vh" : "20vh")};
   transition: 0.5s;
   align-items: center;
+  z-index: 100;
   position: fixed;
   background-color: ${(props) =>
-    props.changeHeader ? "var(--Secondary-color)" : "transparent"};
+    props.changeHeader ? "rgba(255, 255, 255, 0.65)" : ""};
+
+  /* border-radius: ${(props) => (props.changeHeader ? "16px" : "")}; */
 
   box-shadow: ${(props) =>
-    props.changeHeader ? "rgba(149, 157, 165, 0.2) 0px 8px 24px" : ""};
+    props.changeHeader ? " 0 4px 30px rgba(0, 0, 0, 0.1)" : ""};
+  backdrop-filter: ${(props) => (props.changeHeader ? " blur(9.4px)" : "")};
+  -webkit-backdrop-filter: ${(props) =>
+    props.changeHeader ? "blur(9.4px)" : ""};
 `;
 
 const HomeIcon = styled.div`
