@@ -1,10 +1,23 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import homeLogo from "../assets/mylogo.png";
+import { useState } from "react";
 
 import { Link } from "react-scroll";
 
 function Header({ secNum }) {
+  const [changeHeader, setChangeHeader] = useState(false);
+
+  //header change function
+  const onChangeHeader = () => {
+    if (window.scrollY >= 700) {
+      setChangeHeader(true);
+    } else {
+      setChangeHeader(false);
+    }
+  };
+  //change header by scrolling
+  window.addEventListener("scroll", onChangeHeader);
   const bg = useRef(false);
   if (secNum % 2 === 0 || secNum === 1) {
     bg.current = true;
@@ -15,7 +28,7 @@ function Header({ secNum }) {
     console.log(to);
   };
   return (
-    <Navigation>
+    <Navigation changeHeader={changeHeader}>
       <HomeIcon>
         <img src={homeLogo} alt="" />
       </HomeIcon>
@@ -85,10 +98,14 @@ const Navigation = styled.nav`
   display: flex;
   width: 100vw;
   justify-content: space-between;
-  height: 20vh;
+  height: 10vh;
   align-items: center;
   position: fixed;
+  background-color: ${(props) =>
+    props.changeHeader ? "var(--Secondary-color)" : "transparent"};
+  transition: background 0.5s;
 `;
+
 const HomeIcon = styled.div`
   height: 75px;
   width: 75px;
@@ -111,8 +128,8 @@ const LinksWrapper = styled.div`
       font-size: 1.2rem;
       font: bold 14px/1.4 "Open Sans", arial, sans-serif;
       text-transform: uppercase;
-      color: ${(props) =>
-        props.bg ? "var(--main-color)" : "var(--Secondary-color)"};
+      color: var(--main-color);
+      cursor: pointer;
     }
     a:after {
       background: none repeat scroll 0 0 transparent;
@@ -122,8 +139,7 @@ const LinksWrapper = styled.div`
       height: 2px;
       left: 50%;
       position: absolute;
-      background: ${(props) =>
-        props.bg ? "var(--main-color)" : "var(--Secondary-color)"};
+      background: var(--main-color);
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }

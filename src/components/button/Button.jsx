@@ -13,7 +13,7 @@ export default Button;
 
 const ContactMeCTA = styled.button`
   border: 1px solid var(--body-bg);
-  padding: 1.5rem 6rem;
+  padding: 1.5rem 5rem;
   margin-top: 5vh;
   align-items: center;
   text-transform: uppercase;
@@ -21,7 +21,6 @@ const ContactMeCTA = styled.button`
   background-color: var(--main-color);
   color: var(--body-bg);
   cursor: pointer;
-
   box-shadow: inset 0px 0px 0px var(--Secondary-color);
   transition: all 0.5s !important;
   :hover {

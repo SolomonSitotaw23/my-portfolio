@@ -5,15 +5,12 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
-import { useRef } from "react";
-import useScrollSnap from "react-use-scroll-snap";
+
 import { Element } from "react-scroll";
 function App() {
-  const scrollRef = useRef(0);
-  const secNum = useScrollSnap({ ref: scrollRef, duration: 100, delay: 5 });
   return (
-    <section ref={scrollRef}>
-      <Header secNum={secNum} />
+    <section>
+      <Header />
       <Element name="home" className="element">
         <Home />
       </Element>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../components/button/Button";
 import myPhoto from "../assets/my_photo1.png";
 
 const Home = () => {
@@ -13,9 +14,7 @@ const Home = () => {
           A Student at Bahirdar university ,I was born in gondar on the 19th of
           July 1999 G.C. .I am interested in front-end web development.
         </p>
-        <a href="../assets/my_resume/mycv.pdf" download>
-          Download Resume
-        </a>
+        <Button>Download Resume</Button>
       </HeroTxt>
       <PhotoContainer>
         <MyPhoto className="my-photo">
@@ -33,7 +32,7 @@ const HomeSec = styled.section`
   align-items: center;
   justify-content: space-around;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   background: linear-gradient(
     to right,
     var(--main-color) 60%,
