@@ -5,35 +5,33 @@ const Skills = () => {
   return (
     <CenterDiv>
       <SkillBox>
-        <p>JAVASCRIPT</p>
+        <p>Frontend</p>
         <p>81%</p>
         <Skill>
           <SkillLevel width="81%"></SkillLevel>
         </Skill>
+        <Detail>
+          React js, Redux , Vue, pinia,Tailwind css, styled components, scss,
+          Material ui
+        </Detail>
       </SkillBox>
 
       <SkillBox>
-        <p>PHP</p>
+        <p>Backend</p>
         <p>82%</p>
         <Skill>
           <SkillLevel></SkillLevel>
         </Skill>
+        <Detail>Hasura, Postgressql , Nodejs , Express , php</Detail>
       </SkillBox>
 
       <SkillBox>
-        <p>Java</p>
+        <p>Dev ops</p>
         <p>77%</p>
         <Skill>
           <SkillLevel></SkillLevel>
         </Skill>
-      </SkillBox>
-
-      <SkillBox>
-        <p>SQL</p>
-        <p>56%</p>
-        <Skill>
-          <SkillLevel></SkillLevel>
-        </Skill>
+        <Detail>Hasura, Postgressql , Nodejs , Express , php</Detail>
       </SkillBox>
     </CenterDiv>
   );
@@ -48,6 +46,11 @@ const CenterDiv = styled.div`
   h1 {
     color: var(--Secondary-color);
   }
+`;
+const Detail = styled.p`
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 0.7rem;
 `;
 const SkillBox = styled.div`
   width: 100%;
@@ -72,6 +75,7 @@ const Skill = styled.div`
   padding: 4px;
   border: 1px solid var(--Secondary-color);
   border-radius: 2px;
+  margin-bottom: 1rem;
 `;
 
 const SkillLevel = styled.div`

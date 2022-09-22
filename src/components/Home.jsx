@@ -1,20 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../components/button/Button";
 import myPhoto from "../assets/my_photo1.png";
+import FileSaver from "file-saver";
 
 const Home = () => {
+  const fileSave = () => {
+    FileSaver.saveAs("my_resume/SolomonSitotaw.pdf", "SolomonSitotawCv.pdf");
+  };
   return (
     <HomeSec id="hero">
       <HeroTxt className="hero-txt">
         <h1>
           Hello! I'm <br /> Solomon Sitotaw
         </h1>
-        <p>
-          A Student at Bahirdar university ,I was born in gondar on the 19th of
-          July 1999 G.C. .I am interested in front-end web development.
-        </p>
-        <Button>Download Resume</Button>
+        <p>Software Engineer. Full-Stack JS Developer.</p>
+        <DLDButton onClick={fileSave}>Download Resume</DLDButton>
       </HeroTxt>
       <PhotoContainer>
         <MyPhoto className="my-photo">
@@ -51,6 +51,23 @@ const HomeSec = styled.section`
     padding: 1rem 3rem;
     flex-direction: column-reverse;
     padding: 0 2rem;
+  }
+`;
+const DLDButton = styled.button`
+  background: none;
+  border: none;
+  color: var(--Secondary-color);
+  /* font-weight: bold; */
+  font-size: 1rem;
+  border: 1px solid var(--Secondary-color);
+  padding: 1.5rem 3rem;
+  font: bold 14px/1.4 "Open Sans", arial, sans-serif;
+  margin-top: 1rem;
+  cursor: pointer;
+  :hover {
+    background: var(--Secondary-color);
+    color: var(--main-color);
+    transition: background 1sec;
   }
 `;
 

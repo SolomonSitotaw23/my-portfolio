@@ -10,7 +10,7 @@ function Header({ secNum }) {
 
   //header change function
   const onChangeHeader = () => {
-    if (window.scrollY >= 700) {
+    if (window.scrollY >= 600) {
       setChangeHeader(true);
     } else {
       setChangeHeader(false);
@@ -98,12 +98,15 @@ const Navigation = styled.nav`
   display: flex;
   width: 100vw;
   justify-content: space-between;
-  height: 10vh;
+  height: ${(props) => (props.changeHeader ? "10vh" : "20vh")};
+  transition: 0.5s;
   align-items: center;
   position: fixed;
   background-color: ${(props) =>
     props.changeHeader ? "var(--Secondary-color)" : "transparent"};
-  transition: background 0.5s;
+
+  box-shadow: ${(props) =>
+    props.changeHeader ? "rgba(149, 157, 165, 0.2) 0px 8px 24px" : ""};
 `;
 
 const HomeIcon = styled.div`
