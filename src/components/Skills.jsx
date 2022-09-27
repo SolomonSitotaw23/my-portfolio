@@ -18,7 +18,7 @@ const Skills = () => {
 
       <SkillBox>
         <p>Backend</p>
-        <p>82%</p>
+        <p>73%</p>
         <Skill>
           <SkillLevel width="73"></SkillLevel>
         </Skill>
@@ -27,9 +27,9 @@ const Skills = () => {
 
       <SkillBox>
         <p>Dev ops</p>
-        <p>77%</p>
+        <p>75%</p>
         <Skill>
-          <SkillLevel></SkillLevel>
+          <SkillLevel width="75"></SkillLevel>
         </Skill>
         <Detail>Docker , git </Detail>
       </SkillBox>
