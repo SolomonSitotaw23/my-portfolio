@@ -14,7 +14,8 @@ const Home = () => {
           Hello! I'm <br /> Solomon Sitotaw
         </h1>
         <p>Software Engineer. Full-Stack JS Developer.</p>
-        <DLDButton onClick={fileSave}>Download Resume</DLDButton>
+        <DLDButton onClick={fileSave}>Download Resume</DLDButton>{" "}
+        <Causion>this site is under development !</Causion>
       </HeroTxt>
       <PhotoContainer>
         <MyPhoto className="my-photo">
@@ -52,6 +53,14 @@ const HomeSec = styled.section`
     flex-direction: column-reverse;
     padding: 0 2rem;
   }
+`;
+const Causion = styled.p`
+  margin-top: 2rem;
+  color: red;
+  font-size: 0.8rem;
+  border: 1px solid red;
+  padding: 1rem 0;
+  text-align: center;
 `;
 const DLDButton = styled.button`
   background: none;
