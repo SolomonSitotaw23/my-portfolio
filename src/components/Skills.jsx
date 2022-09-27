@@ -20,7 +20,7 @@ const Skills = () => {
         <p>Backend</p>
         <p>82%</p>
         <Skill>
-          <SkillLevel></SkillLevel>
+          <SkillLevel width="73"></SkillLevel>
         </Skill>
         <Detail>Hasura, Postgressql , MsSql, Nodejs , Express , php</Detail>
       </SkillBox>
