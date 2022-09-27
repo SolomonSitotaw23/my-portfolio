@@ -20,7 +20,7 @@ const Skills = () => {
         <p>Backend</p>
         <p>73%</p>
         <Skill>
-          <SkillLevel width="73"></SkillLevel>
+          <SkillLevel width="73%"></SkillLevel>
         </Skill>
         <Detail>Hasura, Postgressql , MsSql, Nodejs , Express , php</Detail>
       </SkillBox>
@@ -29,7 +29,7 @@ const Skills = () => {
         <p>Dev ops</p>
         <p>75%</p>
         <Skill>
-          <SkillLevel width="75"></SkillLevel>
+          <SkillLevel width="75%"></SkillLevel>
         </Skill>
         <Detail>Docker , git </Detail>
       </SkillBox>
