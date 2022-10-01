@@ -16,9 +16,9 @@ const ControlledPopup = ({ about, img }) => {
             &times;{" "}
           </a>
           <MyContents>
-            <img src={img} alt="" />
             <div>
               <h1>{about}</h1>
+              <img src={img} alt="" />
             </div>
           </MyContents>
         </div>
@@ -41,13 +41,32 @@ const MyContents = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+  transition: all 1s;
   div {
     width: 100%;
     height: 100%;
-    background-color: var(--Secondary-color);
+    background-color: var(--body-bg);
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
+    overflow-y: auto;
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      background-color: var(--main-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--main-color);
+    }
+
+    img {
+      width: 100%;
+    }
 
     h1 {
       color: var(--main-color);
@@ -69,7 +88,6 @@ const MyContents = styled.div`
 const PopUP = styled.div`
   display: flex;
   justify-content: end;
-  transition: all 2s;
 `;
 const ReadMoreIcon = styled(ReadMore)`
   color: var(--main-color);

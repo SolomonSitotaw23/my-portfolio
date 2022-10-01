@@ -6,6 +6,7 @@ import Fylo from "../../assets/Fylo.jpg";
 import Crwn from "../../assets/crwnClothing.jpg";
 import Todo from "../../assets/TodoList.jpg";
 import ControlledPopup from "../PopUp/PopUp";
+import BeatsPreview from "../../assets/MyProjects/beatsPreview.png";
 
 import beatsLanding from "../../assets/beats landing.jpg";
 import Discord from "../../assets/DiscordLandingPage.jpg";
@@ -33,7 +34,7 @@ const MyTabs = () => (
         <img src={beatsLanding} alt="" />
         <ControlledPopup
           about=" Fully responsive Beats Production Page"
-          img={beatsLanding}
+          img={BeatsPreview}
         />
       </ProjectContainer>
 
