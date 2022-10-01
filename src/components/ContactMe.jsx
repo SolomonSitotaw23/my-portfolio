@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./button/Button";
-
+import { Send } from "@styled-icons/material/Send";
 const ContactMe = () => {
   return (
     <ContactMeSec className="contact-me sec" id="contact-me">
@@ -38,7 +38,9 @@ const ContactMe = () => {
                 required
               ></textarea>
             </label>
-            <Button>Send</Button>
+            <Button>
+              Shoot <SendIcon size={23} />
+            </Button>
           </MessageTxt>
         </form>
       </ContactWrapper>
@@ -47,6 +49,10 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
+
+const SendIcon = styled(Send)`
+  margin-left: 1rem;
+`;
 
 const ContactMeSec = styled.section`
   height: 100vh;

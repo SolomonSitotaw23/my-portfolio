@@ -156,8 +156,11 @@ const ProjectContainer = styled.a`
   align-self: flex-start;
   width: 330px;
   padding: 15px;
-  border: 1px solid var(--main-color);
   margin: 20px;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 23.5px -46px rgba(72, 49, 212, 0.23),
+    0px 0px 188px -46px rgba(72, 49, 212, 0.46);
+
   :hover {
     box-shadow: 3px 6px 16px -8px rgba(0, 0, 0, 0.63);
     -webkit-box-shadow: 3px 6px 16px -8px rgba(0, 0, 0, 0.63);

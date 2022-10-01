@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { Codepen } from "@styled-icons/remix-line/Codepen";
+import { Github } from "@styled-icons/boxicons-logos/Github";
+import { Phone } from "@styled-icons/boxicons-solid/Phone";
+import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
 
 const Footer = () => {
   var date = new Date();
@@ -8,22 +12,16 @@ const Footer = () => {
     <FooterSec className="footer ">
       <h1>Say Hello</h1>
       <Social>
-        <a href="mailto: solomonsitotaw9@gmail.com?subject=contact">
-          <ion-icon name="mail"></ion-icon>
-        </a>
-        <a href="https://codepen.io/s-l-d">
-          <ion-icon name="logo-codepen"></ion-icon>
-        </a>
+        <CodepenIcon size={50} />
 
-        <a href="https://github.com/SolomonSitotaw23">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a href="https://www.linkedin.com/solomonsitotaw23">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-        <a href="tel : 0975623076" alt="0975623076 | 0940361102">
-          <ion-icon name="Call" alt="0975623076 | 0940361102"></ion-icon>
-        </a>
+        <GithubIcon size={50} />
+        <LinkedinIcon
+          size={50}
+          onClick={() => {
+            navigator.clipboard.writeText("solsssssss");
+          }}
+        />
+        <PhoneIcon size={50} />
       </Social>
       <CopyRight>
         <hr />
@@ -35,6 +33,40 @@ const Footer = () => {
 
 export default Footer;
 
+const CodepenIcon = styled(Codepen)`
+  color: var(--main-color);
+  cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+    transition: transform 0.8s;
+  }
+`;
+const GithubIcon = styled(Github)`
+  color: var(--main-color);
+  cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+    transition: transform 0.8s;
+    box-shadow: 100px 100px 272px rgba(0, 0, 0, 0.37);
+  }
+`;
+const LinkedinIcon = styled(Linkedin)`
+  color: var(--main-color);
+  cursor: pointer;
+  :hover {
+    color: #0072b1;
+    transform: scale(1.2);
+    transition: transform 0.8s, color 0.8s;
+  }
+`;
+const PhoneIcon = styled(Phone)`
+  color: var(--main-color);
+  cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+    transition: transform 0.8s;
+  }
+`;
 const FooterSec = styled.section`
   height: 100vh;
   display: flex;

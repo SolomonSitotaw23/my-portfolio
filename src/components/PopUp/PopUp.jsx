@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import styled from "styled-components";
+import { ReadMore } from "@styled-icons/material-sharp/ReadMore";
 const ControlledPopup = ({ about, img }) => {
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   return (
     <PopUP>
       {" "}
-      <button
-        type="button"
-        className="button"
-        onClick={() => setOpen((o) => !o)}
-      >
-        Overview
-      </button>{" "}
+      <ReadMoreIcon size={48} onClick={() => setOpen((o) => !o)} />
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         {" "}
         <div className="modal">
@@ -22,7 +17,9 @@ const ControlledPopup = ({ about, img }) => {
           </a>
           <MyContents>
             <img src={img} alt="" />
-            <p>{about}</p>
+            <div>
+              <h1>{about}</h1>
+            </div>
           </MyContents>
         </div>
       </Popup>
@@ -33,17 +30,36 @@ const ControlledPopup = ({ about, img }) => {
 export default ControlledPopup;
 
 const MyContents = styled.div`
-  background-color: var(--main-color);
-  height: 80vh;
-  width: 80vw;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  height: 90vh;
+  width: 90vw;
+  padding: 5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  p {
-    color: var(--Secondary-color);
-    font-size: 2rem;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  div {
+    width: 100%;
+    height: 100%;
+    background-color: var(--Secondary-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    h1 {
+      color: var(--main-color);
+      font-size: 2rem;
+      text-decoration-line: underline;
+      text-decoration-style: "solid";
+      text-decoration-color: rgba(203, 243, 129, 1);
+      text-decoration-thickness: 6px;
+      font-family: "Lexend Deca", sans-serif;
+    }
   }
+
   img {
     object-fit: contain;
     width: 20vw;
@@ -51,21 +67,10 @@ const MyContents = styled.div`
 `;
 
 const PopUP = styled.div`
-  button {
-    border: 1px solid var(--body-bg);
-    padding: 0.8rem 6rem;
-    align-items: center;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: var(--main-color);
-    color: var(--body-bg);
-    cursor: pointer;
-
-    box-shadow: inset 0px 0px 0px var(--Secondary-color);
-    transition: all 0.5s !important;
-    :hover {
-      box-shadow: inset 350px 0px 0px var(--Secondary-color);
-      color: var(--main-color);
-    }
-  }
+  display: flex;
+  justify-content: end;
+  transition: all 2s;
+`;
+const ReadMoreIcon = styled(ReadMore)`
+  color: var(--main-color);
 `;

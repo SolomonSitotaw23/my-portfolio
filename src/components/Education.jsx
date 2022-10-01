@@ -36,10 +36,6 @@ const Education = () => {
             bachelor of software engineering-
             <span>Bahirdar University institute of technology</span>
           </h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum
-            dignissimos veritatis soluta officiis! Velit.
-          </p>
         </TimeLineItem>
         <TimeLineItem>
           <Date> 2022</Date>
