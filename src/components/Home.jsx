@@ -5,7 +5,7 @@ import FileSaver from "file-saver";
 
 const Home = () => {
   const fileSave = () => {
-    FileSaver.saveAs("my_resume/SolomonSitotaw.pdf", "SolomonSitotawCv.pdf");
+    FileSaver.saveAs("my_resume/solomonSitotaw.pdf", "SolomonSitotawCv.pdf");
   };
   return (
     <HomeSec id="hero">
@@ -15,7 +15,6 @@ const Home = () => {
         </h1>
         <p>Software Engineer. Full-Stack JS Developer.</p>
         <DLDButton onClick={fileSave}>Download Resume</DLDButton>{" "}
-        <Causion>this site is under development !</Causion>
       </HeroTxt>
       <PhotoContainer>
         <MyPhoto className="my-photo">
@@ -53,14 +52,6 @@ const HomeSec = styled.section`
     flex-direction: column-reverse;
     padding: 0 2rem;
   }
-`;
-const Causion = styled.p`
-  margin-top: 2rem;
-  color: red;
-  font-size: 0.8rem;
-  border: 1px solid red;
-  padding: 1rem 0;
-  text-align: center;
 `;
 const DLDButton = styled.button`
   background: none;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Codepen } from "@styled-icons/remix-line/Codepen";
+import { StackOverflow } from "@styled-icons/boxicons-logos/StackOverflow";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Phone } from "@styled-icons/boxicons-solid/Phone";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
@@ -12,16 +12,33 @@ const Footer = () => {
     <FooterSec className="footer ">
       <h1>Say Hello</h1>
       <Social>
-        <CodepenIcon size={50} />
-
-        <GithubIcon size={50} />
+        {" "}
+        <GithubIcon
+          size={50}
+          onClick={() => {
+            window.location.href = "https://github.com/SolomonSitotaw23";
+          }}
+        />
         <LinkedinIcon
           size={50}
           onClick={() => {
-            navigator.clipboard.writeText("solsssssss");
+            window.location.href =
+              "https://www.linkedin.com/in/solomon-sitotaw-306b12155/";
           }}
+        />{" "}
+        <StackOverflowIcon
+          onClick={() => {
+            window.location.href =
+              "https://stackoverflow.com/users/17508957/solomon-sitotaw";
+          }}
+          size={50}
         />
-        <PhoneIcon size={50} />
+        <PhoneIcon
+          onClick={() => {
+            navigator.clipboard.writeText("+251975623076");
+          }}
+          size={50}
+        />
       </Social>
       <CopyRight>
         <hr />
@@ -33,10 +50,11 @@ const Footer = () => {
 
 export default Footer;
 
-const CodepenIcon = styled(Codepen)`
+const StackOverflowIcon = styled(StackOverflow)`
   color: var(--main-color);
   cursor: pointer;
   :hover {
+    color: #f48024;
     transform: scale(1.2);
     transition: transform 0.8s;
   }
@@ -45,6 +63,7 @@ const GithubIcon = styled(Github)`
   color: var(--main-color);
   cursor: pointer;
   :hover {
+    color: #000;
     transform: scale(1.2);
     transition: transform 0.8s;
     box-shadow: 100px 100px 272px rgba(0, 0, 0, 0.37);
@@ -63,6 +82,8 @@ const PhoneIcon = styled(Phone)`
   color: var(--main-color);
   cursor: pointer;
   :hover {
+    color: #24b9f4;
+
     transform: scale(1.2);
     transition: transform 0.8s;
   }

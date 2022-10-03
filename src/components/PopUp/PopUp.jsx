@@ -8,7 +8,10 @@ const ControlledPopup = ({ about, img }) => {
   return (
     <PopUP>
       {" "}
-      <ReadMoreIcon size={48} onClick={() => setOpen((o) => !o)} />
+      <div>
+        <span>more</span>
+        <ReadMoreIcon size={48} onClick={() => setOpen((o) => !o)} />
+      </div>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         {" "}
         <div className="modal">
@@ -36,6 +39,7 @@ const MyContents = styled.div`
   -webkit-backdrop-filter: blur(12px);
   border-radius: 10px;
   height: 90vh;
+  text-align: center;
   width: 90vw;
   padding: 5rem;
   display: flex;
@@ -73,9 +77,11 @@ const MyContents = styled.div`
       font-size: 2rem;
       text-decoration-line: underline;
       text-decoration-style: "solid";
-      text-decoration-color: rgba(203, 243, 129, 1);
-      text-decoration-thickness: 6px;
+      text-decoration-color: #441eed;
+      font-weight: 300;
+      text-decoration-thickness: 2px;
       font-family: "Lexend Deca", sans-serif;
+      margin-bottom: 1rem;
     }
   }
 
@@ -86,8 +92,17 @@ const MyContents = styled.div`
 `;
 
 const PopUP = styled.div`
+  margin-top: 2rem;
   display: flex;
   justify-content: end;
+  div {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 1rem;
+      color: var(--main-color);
+    }
+  }
 `;
 const ReadMoreIcon = styled(ReadMore)`
   color: var(--main-color);

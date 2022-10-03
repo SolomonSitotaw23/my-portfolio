@@ -1,14 +1,14 @@
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import styled from "styled-components";
-import sunnySide from "../../assets/sunny-side.jpg";
-import Tesla from "../../assets/TeslaClone.jpg";
+
 import Fylo from "../../assets/Fylo.jpg";
+import FyloPreview from "../../assets/MyProjects/fyloPreview-min.png";
 import Crwn from "../../assets/crwnClothing.jpg";
-import Todo from "../../assets/TodoList.jpg";
 import ControlledPopup from "../PopUp/PopUp";
 import BeatsPreview from "../../assets/MyProjects/beatsPreview.png";
 import FoodThumb from "../../assets/foodrecipepreview-min.png";
 import FoodFull from "../../assets/MyProjects/food recipe-min.png";
+import CrwnClothing from "../../assets/MyProjects/crwnpreview-min.png";
 
 import beatsLanding from "../../assets/beats landing.jpg";
 import Discord from "../../assets/DiscordLandingPage.jpg";
@@ -26,52 +26,16 @@ const MyTabs = () => (
       <ProjectContainer>
         <img src={FoodThumb} alt="" />
         <ControlledPopup
-          about="Clone of Landing Page of Discord  "
+          about="Full Food recipe social media app with vuejs and Hasura  "
           img={FoodFull}
-        />
-      </ProjectContainer>
-      <ProjectContainer>
-        <img src={Discord} alt="" />
-        <ControlledPopup
-          about="Clone of Landing Page of Discord  "
-          img={DiscordLanding}
-        />
-      </ProjectContainer>
-
-      <ProjectContainer>
-        <img src={beatsLanding} alt="" />
-        <ControlledPopup
-          about=" Fully responsive Beats Production Page"
-          img={BeatsPreview}
-        />
-      </ProjectContainer>
-
-      <ProjectContainer>
-        <img src={Fylo} alt="" />
-        <ControlledPopup
-          about="Clone of Landing Page of Discord"
-          img={Discord}
         />
       </ProjectContainer>
       <ProjectContainer>
         <img src={Crwn} alt="" />
         <ControlledPopup
-          about="Clone of Landing Page of Discord  "
-          img={Discord}
-        />
-      </ProjectContainer>
-      <ProjectContainer>
-        <img src={Todo} alt="" />
-        <ControlledPopup
-          about="Clone of Landing Page of Discord  "
-          img={Discord}
-        />
-      </ProjectContainer>
-      <ProjectContainer>
-        <img src={sunnySide} alt="" />
-        <ControlledPopup
-          about="Clone of Landing Page of Discord  "
-          img={Discord}
+          about="Fully Functional eCommerce app using React JS and Firebase"
+          link="https://solo23-ecommerce.herokuapp.com/"
+          img={CrwnClothing}
         />
       </ProjectContainer>
     </STabPanel>
@@ -79,21 +43,26 @@ const MyTabs = () => (
     <STabPanel>
       <ProjectContainer>
         <img src={Discord} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord Made With react Js  "
+          img={DiscordLanding}
+        />
       </ProjectContainer>
 
       <ProjectContainer>
         <img src={beatsLanding} alt="" />
-      </ProjectContainer>
-
-      <ProjectContainer>
-        <img src={Tesla} alt="" />
+        <ControlledPopup
+          about=" Fully responsive Beats Production Page Made with reactJS"
+          img={BeatsPreview}
+        />
       </ProjectContainer>
 
       <ProjectContainer>
         <img src={Fylo} alt="" />
-      </ProjectContainer>
-      <ProjectContainer>
-        <img src={sunnySide} alt="" />
+        <ControlledPopup
+          about="Fylo Dark Mode Landing Page with only Html And Css"
+          img={FyloPreview}
+        />
       </ProjectContainer>
     </STabPanel>
   </STabs>
@@ -150,6 +119,7 @@ STabPanel.tabsRole = "TabPanel";
 const ProjectContainer = styled.a`
   align-self: flex-start;
   width: 330px;
+  height: 250px;
   padding: 15px;
   margin: 20px;
   border-radius: 1rem;

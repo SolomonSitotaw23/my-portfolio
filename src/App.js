@@ -5,10 +5,20 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
-
+import { useState, useEffect } from "react";
 import { Element } from "react-scroll";
+import Loading from "./Loading";
 function App() {
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+  const handleLoading = () => {
+    setIsLoading(false);
+  };
+  useEffect(() => {
+    window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
+  }, []);
+
+  return !isLoading ? (
     <section>
       <Header />
       <Element name="home" className="element">
@@ -30,6 +40,8 @@ function App() {
         <Footer />
       </Element>
     </section>
+  ) : (
+    <Loading />
   );
 }
 export default App;
