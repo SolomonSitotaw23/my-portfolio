@@ -6,9 +6,8 @@ const Projects = () => {
   return (
     <ProjectsSec>
       <ProjectHeading>
-        <h3>My Projects</h3>
+        <h3>Selected Projects</h3>
       </ProjectHeading>
-
       <MyTabs />
     </ProjectsSec>
   );

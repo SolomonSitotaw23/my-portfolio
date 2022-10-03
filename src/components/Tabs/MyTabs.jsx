@@ -7,26 +7,34 @@ import Crwn from "../../assets/crwnClothing.jpg";
 import Todo from "../../assets/TodoList.jpg";
 import ControlledPopup from "../PopUp/PopUp";
 import BeatsPreview from "../../assets/MyProjects/beatsPreview.png";
+import FoodThumb from "../../assets/foodrecipepreview-min.png";
+import FoodFull from "../../assets/MyProjects/food recipe-min.png";
 
 import beatsLanding from "../../assets/beats landing.jpg";
 import Discord from "../../assets/DiscordLandingPage.jpg";
-
+import DiscordLanding from "../../assets/MyProjects/discordLanding-min.png";
 const MyTabs = () => (
   <STabs
     selectedTabClassName="is-selected"
     selectedTabPanelClassName="is-selected"
   >
     <STabList>
-      <STab>All</STab>
-      <STab>Landing Pages</STab>
-      <STab>Full web apps </STab>
+      <STab>FullStack</STab>
+      <STab>Front-end </STab>
     </STabList>
     <STabPanel>
+      <ProjectContainer>
+        <img src={FoodThumb} alt="" />
+        <ControlledPopup
+          about="Clone of Landing Page of Discord  "
+          img={FoodFull}
+        />
+      </ProjectContainer>
       <ProjectContainer>
         <img src={Discord} alt="" />
         <ControlledPopup
           about="Clone of Landing Page of Discord  "
-          img={Discord}
+          img={DiscordLanding}
         />
       </ProjectContainer>
 
@@ -39,14 +47,9 @@ const MyTabs = () => (
       </ProjectContainer>
 
       <ProjectContainer>
-        <img src={Tesla} alt="" />
-        <ControlledPopup about="Clone of Landing Page of Tesla  " img={Tesla} />
-      </ProjectContainer>
-
-      <ProjectContainer>
         <img src={Fylo} alt="" />
         <ControlledPopup
-          about="Clone of Landing Page of Discord  "
+          about="Clone of Landing Page of Discord"
           img={Discord}
         />
       </ProjectContainer>
@@ -91,15 +94,6 @@ const MyTabs = () => (
       </ProjectContainer>
       <ProjectContainer>
         <img src={sunnySide} alt="" />
-      </ProjectContainer>
-    </STabPanel>
-
-    <STabPanel>
-      <ProjectContainer>
-        <img src={Crwn} alt="" />
-      </ProjectContainer>
-      <ProjectContainer>
-        <img src={Todo} alt="" />
       </ProjectContainer>
     </STabPanel>
   </STabs>
