@@ -6,7 +6,6 @@ const Loading = () => {
   return (
     <Centered>
       <Blob1></Blob1>
-      <Blob2></Blob2>
     </Centered>
   );
 };
@@ -14,43 +13,61 @@ const Loading = () => {
 export default Loading;
 
 const Centered = styled.div`
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--body-bg);
-  div {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: var(--main-color);
 `;
 
-const oscl = keyframes`
-	0%{left:20%;}
-	50%{left:50%;}
-	100%{left:20%;}
+const clockwise = keyframes`
+to{
+		transform: rotate(1turn)}
 `;
-const oscr = keyframes`
-	0%{left:80%;}
-	50%{left:50%;}
-	100%{left:80%;}
+const counterClockwise = keyframes`
+		to{
+		transform: rotate(-1turn)}
 `;
 
 const Blob1 = styled.div`
-  left: 20%;
-  animation: ${oscl} 2.5s ease infinite;
-  background: var(--Secondary-color);
-`;
-const Blob2 = styled.div`
-  left: 80%;
-  animation: ${oscr} 2.5s ease infinite;
-  background: var(--main-color);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+  &-list {
+    display: grid;
+    grid-template: repeat(3, 120px) / repeat(3, 120px);
+    grid-gap: 30px;
+  }
+  &-item {
+    display: flex;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: ${counterClockwise} 4s linear infinite;
+  &::before,
+  &::after {
+    border-radius: 50%;
+  }
+  &::before {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    animation: ${clockwise} 4s linear infinite;
+  }
+  &::after {
+    width: 4px;
+    height: 4px;
+    top: 8px;
+    left: 8px;
+    background: #fff;
+    transform-origin: -4px -4px;
+    animation: ${counterClockwise} 1s linear infinite;
+  }
 `;
