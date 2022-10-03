@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import myPhoto from "../assets/my_photo1.png";
 import FileSaver from "file-saver";
-import Loading from "../Loading";
 
 const Home = () => {
   const fileSave = () => {
