@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import myPhoto from "../assets/my_photo1.png";
+import myPhoto from "../assets/my-photo.jpg";
 import FileSaver from "file-saver";
 
 const Home = () => {
